@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FTGM Tools</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent body scroll */
+    position: relative; /* For absolute positioning of the WhatsApp button relative to body */
+  }
+  .topbar {
+    background-color: #007AFF; /* Topbar color as requested */
+    color: white;
+    padding: 15px 10px; /* Increased vertical padding for height */
+    text-align: center;
+    font-size: 1.2em; /* Font size from previous request */
+    flex-shrink: 0; /* Don't shrink the topbar */
+    font-family: 'Audiowide', cursive; /* Audiowide font for topbar text */
+  }
+  .iframe-container {
+    flex-grow: 1; /* Allow iframe container to take remaining height */
+    overflow: hidden; /* Hide scrollbars if iframe content overflows */
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .whatsapp-button {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 10px 25px; /* Adjusted padding for better size */
+    border: none;
+    border-radius: 30px; /* Highly rounded corners */
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline for links */
+    display: inline-flex; /* Use flexbox for icon and text alignment */
+    align-items: center; /* Vertically align icon and text */
+    justify-content: center; /* Horizontally center content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Prominent shadow */
+    gap: 10px; /* Space between icon and text */
+    position: absolute; /* Position relative to the body */
+    bottom: 60px; /* Positioned above the footer */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 10; /* Ensure it's above the iframe */
+    transition: background-color 0.3s ease;
+  }
+  .whatsapp-button:hover {
+    background-color: #1DA851;
+  }
+  .whatsapp-button img { /* Styling for the WhatsApp icon image */
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+  .footer {
+    background-color: #007AFF; /* Same color as topbar */
+    color: white;
+    padding: 15px 10px; /* Similar padding to topbar */
+    text-align: center;
+    font-size: 0.9em;
+    flex-shrink: 0; /* Don't shrink the footer */
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    FTGM Tools
+  </div>
+
+  <div class="iframe-container">
+    <iframe src="https://short-link.me/"></iframe>
+  </div>
+
+  <a href="https://whatsapp.com/channel/0029VbAVaylCnA7pF6IP0R46" target="_blank" class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    Join Whatsapp Channel
+  </a>
+
+  <div class="footer">
+    Developed By Rana Faisal Ali
+  </div>
+
+</body>
+</html>
